@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Halaman Ubah Data</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th>Nama</th>
+                <td>:</td>
+                <td>
+                    <input type="text"  placeholder="Input Nama">
+                </td>
+            </tr>
+            <tr>
+                <th>Tanggal Lahir</th>
+                <td>:</td>
+                <td>
+                    <select name="Tanggal Lahir">
+                        <?php
+                        $tahun = date("Y");
+                        for ($i = 2000; $i <= $tahun; $tahun--) { ?>
+                            <option><?php echo $tahun; ?></option>
+                        <?php } ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Npm</th>
+                <td>:</td>
+                <td>
+                    <input type="text" placeholder="Input Npm">
+                </td>
+            </tr>
+            <tr>
+                <th>Jurusan</th>
+                <td>:</td>
+                <td>
+                    <input type="text"placeholder="Input Jurusan" value="">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
